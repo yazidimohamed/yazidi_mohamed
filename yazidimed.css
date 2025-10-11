@@ -1,0 +1,236 @@
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #8B4513, #228B22, #4682B4); /* Couleurs géologiques : brun, vert, bleu */
+  min-height: 100vh;
+}
+
+/* Header */
+.header-3d {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700; /* Or pour effet roche précieux */
+}
+
+.hero {
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+.section-3d {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.section-3d:hover {
+  transform: scale(1.02); /* Simple effet zoom au survol */
+}
+
+.section-3d h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #8B4513;
+  font-size: 2.5rem;
+}
+
+/* Profil du prof */
+.prof-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.prof-profile:hover {
+  transform: scale(1.02); /* Léger zoom */
+}
+
+.prof-photo {
+  flex-shrink: 0;
+}
+
+.prof-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #8B4513;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.prof-photo img:hover {
+  transform: scale(1.05);
+}
+
+.prof-bio {
+  flex: 1;
+}
+
+.prof-bio h3 {
+  color: #228B22;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.prof-bio p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.prof-bio ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.prof-bio li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cartes */
+.card-3d {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2rem 0;
+}
+
+.card-3d:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-3d img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.card-content h3 {
+  color: #228B22;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0 1rem;
+  }
+
+  .prof-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .prof-photo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-3d {
+    flex-direction: column;
+  }
+
+  .card-3d img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-3d:hover,
+  .prof-profile:hover {
+    transform: none;
+  }
+
+  .prof-photo img:hover {
+    transform: none;
+  }
+}
